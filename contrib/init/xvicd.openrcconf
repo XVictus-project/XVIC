@@ -1,0 +1,26 @@
+# /etc/conf.d/xvicd: config file for /etc/init.d/xvicd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/xvic/xvic.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/xvicd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/xvicd.pid"
+
+# Where to write xvicd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/xvicd"
+
+# User and group to own xvicd process
+#BITCOIND_USER="xvic"
+#BITCOIND_GROUP="xvic"
+
+# Path to xvicd executable
+#BITCOIND_BIN="/usr/bin/xvicd"
+
+# Nice value to run xvicd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

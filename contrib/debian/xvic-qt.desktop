@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=XVIC
+Comment=XVIC P2P Cryptocurrency
+Comment[fr]=XVIC, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=XVIC, eşten eşe kriptografik sanal para birimi
+Exec=xvic-qt %u
+Terminal=false
+Type=Application
+Icon=xvic128
+MimeType=x-scheme-handler/xvic;
+Categories=Office;Finance;

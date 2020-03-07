@@ -1,0 +1,26 @@
+[Unit]
+Description=XVIC's distributed currency daemon
+After=network.target
+
+[Service]
+User=xvic
+Group=xvic
+
+Type=forking
+PIDFile=/var/lib/xvicd/xvicd.pid
+
+ExecStart=/usr/bin/xvicd -daemon -pid=/var/lib/xvicd/xvicd.pid \
+          -conf=/etc/xvic/xvic.conf -datadir=/var/lib/xvicd
+
+ExecStop=-/usr/bin/xvic-cli -conf=/etc/xvic/xvic.conf \
+         -datadir=/var/lib/xvicd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
